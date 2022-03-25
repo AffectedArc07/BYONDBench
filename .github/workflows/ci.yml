@@ -20,6 +20,6 @@ jobs:
           key: ${{ runner.os }}-byond
       - name: Compile Code
         run: |
-          ci/install_byond.sh
+          ci/install_byond.sh 514 1583
           source $HOME/BYOND/byond/bin/byondsetup
           ci/dm.sh paradise.dme

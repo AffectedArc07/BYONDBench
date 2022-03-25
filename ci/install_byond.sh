@@ -3,9 +3,7 @@ set -euo pipefail
 
 # Script imported from ParadiseSS13
 
-source _build_dependencies.sh
-
-if [ -d "$HOME/BYOND/byond/bin" ] && grep -Fxq "${BYOND_MAJOR}.${BYOND_MINOR}" $HOME/BYOND/version.txt;
+if [ -d "$HOME/BYOND/byond/bin" ] && grep -Fxq "{$1}.{$2}" $HOME/BYOND/version.txt;
 then
   echo "Using cached directory."
 else
@@ -13,7 +11,7 @@ else
   rm -rf "$HOME/BYOND"
   mkdir -p "$HOME/BYOND"
   cd "$HOME/BYOND"
-  curl "http://www.byond.com/download/build/${BYOND_MAJOR}/${BYOND_MAJOR}.${BYOND_MINOR}_byond_linux.zip" -o byond.zip
+  curl "http://www.byond.com/download/build/{$1}/{$1}.{$2}_byond_linux.zip" -o byond.zip
   unzip byond.zip
   rm byond.zip
   cd byond
