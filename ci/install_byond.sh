@@ -16,6 +16,6 @@ else
   rm byond.zip
   cd byond
   make here
-  echo "$BYOND_MAJOR.$BYOND_MINOR" > "$HOME/BYOND/version.txt"
+  echo "$1.$2" > "$HOME/BYOND/version.txt"
   cd ~/
 fi
