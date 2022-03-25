@@ -7,6 +7,7 @@ on:
     branches:
     - master
 
+jobs:
   compile_code:
     name: Compile Code
     runs-on: ubuntu-20.04
