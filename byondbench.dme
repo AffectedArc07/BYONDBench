@@ -1,0 +1,15 @@
+// BEGIN_INTERNALS
+// END_INTERNALS
+// BEGIN_FILE_DIR
+#define FILE_DIR .
+// END_FILE_DIR
+// BEGIN_PREFERENCES
+// END_PREFERENCES
+// BEGIN_INCLUDE
+#include "code\benchmark.dm"
+#include "code\helpers.dm"
+#include "code\main.dm"
+#include "code\benchmarks\imageblend.dm"
+#include "code\benchmarks\listset.dm"
+#include "code\benchmarks\mapexpand.dm"
+// END_INCLUDE

@@ -1,0 +1,24 @@
+name: CI
+on:
+  push:
+    branches:
+    - master
+  pull_request:
+    branches:
+    - master
+
+  compile_code:
+    name: Compile Code
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Cache
+        uses: actions/cache@v2
+        with:
+          path: $HOME/BYOND
+          key: ${{ runner.os }}-byond
+      - name: Compile Code
+        run: |
+          ci/install_byond.sh
+          source $HOME/BYOND/byond/bin/byondsetup
+          ci/dm.sh paradise.dme
