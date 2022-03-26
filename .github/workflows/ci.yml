@@ -22,4 +22,4 @@ jobs:
         run: |
           ci/install_byond.sh 514 1583
           source $HOME/BYOND/byond/bin/byondsetup
-          ci/dm.sh paradise.dme
+          ci/dm.sh byondbench.dme
