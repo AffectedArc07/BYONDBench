@@ -1,12 +1,29 @@
 /world
     loop_checks = FALSE
+    fps = 10 // DO NOT CHANGE
 
 /world/New()
     // Setup all benchmarks
     var/list/datum/benchmark/benchmarks = list()
 
+    var/only_run_one = FALSE
+    var/datum/benchmark/only
     for(var/benchmark_type in subtypesof(/datum/benchmark))
-        benchmarks += new benchmark_type()
+        var/datum/benchmark/bm = new benchmark_type()
+        if(bm.only_this_one)
+            only_run_one = TRUE
+            only = bm
+            break
+
+
+    info("Cleaning work dir...")
+    cleanup()
+    info("Done")
+
+    if(only_run_one)
+        benchmarks.Cut()
+        benchmarks.Add(only)
+        info("ONLY RUNNING [only.name]")
 
     info("Loaded [length(benchmarks)] benchmarks")
 

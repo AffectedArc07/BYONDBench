@@ -9,7 +9,10 @@
 #include "code\benchmark.dm"
 #include "code\helpers.dm"
 #include "code\main.dm"
+#include "code\__DEFINES\text.dm"
+#include "code\benchmarks\fileio.dm"
 #include "code\benchmarks\imageblend.dm"
+#include "code\benchmarks\json.dm"
 #include "code\benchmarks\listset.dm"
 #include "code\benchmarks\mapexpand.dm"
 // END_INCLUDE
