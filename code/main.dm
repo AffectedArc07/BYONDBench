@@ -37,6 +37,8 @@
 
     // Report all results in 1 go
     info("\[=====] RESULTS \[=====]")
+    info("DM version: [DM_VERSION].[DM_BUILD]")
+    info("DD version: [world.byond_version].[world.byond_build]")
     for(var/datum/benchmark/benchmark in benchmarks)
         benchmark.report_result()
 
