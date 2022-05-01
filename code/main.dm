@@ -14,6 +14,7 @@
             only_run_one = TRUE
             only = bm
             break
+        benchmarks.Add(bm)
 
 
     info("Cleaning work dir...")
