@@ -17,6 +17,7 @@
         benchmarks.Add(bm)
 
 
+    info("Starting up on [byond_version].[byond_build]")
     info("Cleaning work dir...")
     cleanup()
     info("Done")
