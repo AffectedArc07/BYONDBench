@@ -39,6 +39,7 @@
     info("\[=====] RESULTS \[=====]")
     info("DM version: [DM_VERSION].[DM_BUILD]")
     info("DD version: [world.byond_version].[world.byond_build]")
+    info("System type: [world.system_type]")
     for(var/datum/benchmark/benchmark in benchmarks)
         benchmark.report_result()
 
